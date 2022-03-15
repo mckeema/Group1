@@ -11,6 +11,7 @@ import CoreBluetooth
 class ViewController: UIViewController {
     
     var cbCentralManager: CBCentralManager!
+    var peripheral : CBPeripheral?
 
     override func viewDidLoad() {
         super.viewDidLoad()
