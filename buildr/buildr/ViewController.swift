@@ -10,12 +10,12 @@ import CoreBluetooth
 
 class ViewController: UIViewController {
     
-    var centralManager: CBCentralManager!
+    var cbCentralManager: CBCentralManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        centralManager = CBCentralManager(delegate: self, queue: nil)
+        cbCentralManager = CBCentralManager(delegate: self, queue: nil)
     }
 
 }
@@ -51,4 +51,16 @@ extension ViewController :  CBCentralManagerDelegate {
       peripheral.delegate = self
 
     }
+}
+
+extension ViewController : CBPeripheralDelegate{
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+     
+            if let services = peripheral.services {
+                //discover characteristics of services
+                for service in services {
+                  peripheral.discoverCharacteristics(nil, for: service)
+              }
+            }
+        }
 }
