@@ -14,6 +14,7 @@
 		FBE9410D27E1050100165E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE9410C27E1050100165E7F /* Assets.xcassets */; };
 		FBE9411027E1050100165E7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE9410E27E1050100165E7F /* LaunchScreen.storyboard */; };
 		FBE9411A27E1064500165E7F /* PlateInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9411927E1064500165E7F /* PlateInterface.swift */; };
+		FBE9411C27E12CE800165E7F /* CBUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9411B27E12CE800165E7F /* CBUUID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FBE9410F27E1050100165E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBE9411127E1050100165E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBE9411927E1064500165E7F /* PlateInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateInterface.swift; sourceTree = "<group>"; };
+		FBE9411B27E12CE800165E7F /* CBUUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				FBE9410327E104FA00165E7F /* AppDelegate.swift */,
 				FBE9410527E104FA00165E7F /* SceneDelegate.swift */,
 				FBE9410727E104FA00165E7F /* ViewController.swift */,
+				FBE9411B27E12CE800165E7F /* CBUUID.swift */,
 				FBE9410927E104FA00165E7F /* Main.storyboard */,
 				FBE9410C27E1050100165E7F /* Assets.xcassets */,
 				FBE9410E27E1050100165E7F /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				FBE9410827E104FA00165E7F /* ViewController.swift in Sources */,
 				FBE9410427E104FA00165E7F /* AppDelegate.swift in Sources */,
 				FBE9411A27E1064500165E7F /* PlateInterface.swift in Sources */,
+				FBE9411C27E12CE800165E7F /* CBUUID.swift in Sources */,
 				FBE9410627E104FA00165E7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
