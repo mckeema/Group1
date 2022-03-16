@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		FB0D5ED427E1342300E54216 /* CBUUIDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0D5ED327E1342300E54216 /* CBUUIDS.swift */; };
 		FB99F3F027E2293C00A2E7A5 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F3EF27E2293C00A2E7A5 /* SensorData.swift */; };
+		FB99F3F327E27B6900A2E7A5 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = FB99F3F227E27B6900A2E7A5 /* Charts */; };
+		FB99F3F827E2802E00A2E7A5 /* PlateInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F3F727E2802E00A2E7A5 /* PlateInterface.swift */; };
+		FB99F3FA27E285C200A2E7A5 /* GraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F3F927E285C200A2E7A5 /* GraphsViewController.swift */; };
 		FBE9412A27E12F6100165E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9412927E12F6100165E7F /* AppDelegate.swift */; };
 		FBE9412C27E12F6100165E7F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9412B27E12F6100165E7F /* SceneDelegate.swift */; };
 		FBE9412E27E12F6100165E7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9412D27E12F6100165E7F /* ViewController.swift */; };
@@ -20,6 +23,8 @@
 /* Begin PBXFileReference section */
 		FB0D5ED327E1342300E54216 /* CBUUIDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUIDS.swift; sourceTree = "<group>"; };
 		FB99F3EF27E2293C00A2E7A5 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
+		FB99F3F727E2802E00A2E7A5 /* PlateInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateInterface.swift; sourceTree = "<group>"; };
+		FB99F3F927E285C200A2E7A5 /* GraphsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsViewController.swift; sourceTree = "<group>"; };
 		FBE9412627E12F6100165E7F /* buildr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buildr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE9412927E12F6100165E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBE9412B27E12F6100165E7F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB99F3F327E27B6900A2E7A5 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				FBE9412D27E12F6100165E7F /* ViewController.swift */,
+				FB99F3F927E285C200A2E7A5 /* GraphsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -56,6 +63,14 @@
 				FB0D5ED327E1342300E54216 /* CBUUIDS.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FB99F3F627E2800700A2E7A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FB99F3F727E2802E00A2E7A5 /* PlateInterface.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		FBE9411D27E12F6100165E7F = {
@@ -79,6 +94,7 @@
 			children = (
 				FBE9412927E12F6100165E7F /* AppDelegate.swift */,
 				FBE9412B27E12F6100165E7F /* SceneDelegate.swift */,
+				FB99F3F627E2800700A2E7A5 /* Controller */,
 				FB99F3EE27E2292600A2E7A5 /* Model */,
 				FB99F3ED27E2291200A2E7A5 /* View */,
 				FBE9412F27E12F6100165E7F /* Main.storyboard */,
@@ -105,6 +121,9 @@
 			dependencies = (
 			);
 			name = buildr;
+			packageProductDependencies = (
+				FB99F3F227E27B6900A2E7A5 /* Charts */,
+			);
 			productName = buildr;
 			productReference = FBE9412627E12F6100165E7F /* buildr.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +152,9 @@
 				Base,
 			);
 			mainGroup = FBE9411D27E12F6100165E7F;
+			packageReferences = (
+				FB99F3F127E27B6900A2E7A5 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = FBE9412727E12F6100165E7F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -160,7 +182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB99F3F827E2802E00A2E7A5 /* PlateInterface.swift in Sources */,
 				FBE9412E27E12F6100165E7F /* ViewController.swift in Sources */,
+				FB99F3FA27E285C200A2E7A5 /* GraphsViewController.swift in Sources */,
 				FBE9412A27E12F6100165E7F /* AppDelegate.swift in Sources */,
 				FBE9412C27E12F6100165E7F /* SceneDelegate.swift in Sources */,
 				FB99F3F027E2293C00A2E7A5 /* SensorData.swift in Sources */,
@@ -384,6 +408,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB99F3F127E27B6900A2E7A5 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB99F3F227E27B6900A2E7A5 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB99F3F127E27B6900A2E7A5 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FBE9411E27E12F6100165E7F /* Project object */;
 }

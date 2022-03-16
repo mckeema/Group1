@@ -8,15 +8,13 @@
 import Foundation
 
 struct SensorData{
-    struct accel{
-        var x: Float?
-        var y: Float?
-        var z: Float?
-    }
-    struct gyro{
-        var x: Float?
-        var y: Float?
-        var z: Float?
-    }
+    var accelX : Float?
+    var accelY : Float?
+    var accelZ : Float?
+    
+    var gyroX : Float?
+    var gyroY : Float?
+    var gyroZ : Float?
+    
     var vibration: Float?
 }
