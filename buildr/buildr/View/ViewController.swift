@@ -13,6 +13,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
     // Properties
     private var centralManager: CBCentralManager!
     private var peripheral: CBPeripheral!
+    private var rxCharacteristic: CBCharacteristic!
     
     
     override func viewDidLoad() {
@@ -74,6 +75,10 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
             for characteristic in characteristics {
                 if characteristic.uuid == CBUUIDs.PlateCharacteristicUUID {
                     print("Sensor data characteristic found")
+                    rxCharacteristic = characteristic
+
+                    peripheral.setNotifyValue(true, for: rxCharacteristic!)
+                    peripheral.readValue(for: characteristic)
                 }
             }
         }
@@ -83,7 +88,7 @@ class ViewController: UIViewController, CBPeripheralDelegate, CBCentralManagerDe
 
         var characteristicASCIIValue = NSString()
 
-        guard characteristic == CBUUIDs.PlateCharacteristicUUID,
+        guard characteristic == rxCharacteristic,
 
         let characteristicValue = characteristic.value,
         let ASCIIstring = NSString(data: characteristicValue, encoding: String.Encoding.utf8.rawValue) else { return }
