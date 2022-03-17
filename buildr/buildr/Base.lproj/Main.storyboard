@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pbv-iN-wIf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -16,40 +16,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO5-df-87D">
-                                <rect key="frame" x="179" y="433" width="56" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="ECI-tO-DUZ"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO5-df-87D">
+                                <rect key="frame" x="30" y="64" width="56" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start"/>
                                 <connections>
                                     <action selector="StartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U8R-7e-Fqo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahb-t0-wjD">
-                                <rect key="frame" x="185" y="472" width="55" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahb-t0-wjD">
+                                <rect key="frame" x="94" y="64" width="54.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Stop"/>
                                 <connections>
                                     <action selector="StopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQq-fX-ta9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZB-OH-i5j">
+                                <rect key="frame" x="160" y="69" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fd-pE-DiC" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="30" y="115" width="364" height="217"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="rzT-LG-eda"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8K-D3-sSo">
+                                <rect key="frame" x="37" y="353" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CU-d2-FcY">
+                                <rect key="frame" x="30" y="382" width="105" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Bench Press"/>
+                                <connections>
+                                    <action selector="benchPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ffW-Ok-Inp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bn4-uf-m49">
+                                <rect key="frame" x="33" y="455" width="74.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Deadlift"/>
+                                <connections>
+                                    <action selector="dlButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="re6-7g-RvF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT8-5B-eFQ">
+                                <rect key="frame" x="30" y="421" width="62" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Squat"/>
+                                <connections>
+                                    <action selector="squatButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="III-ds-qlr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ahb-t0-wjD" secondAttribute="trailing" constant="174" id="C1A-b6-Ijl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MO5-df-87D" secondAttribute="trailing" constant="179" id="Fzq-ez-T3z"/>
-                            <constraint firstItem="ahb-t0-wjD" firstAttribute="top" secondItem="MO5-df-87D" secondAttribute="bottom" constant="8" symbolic="YES" id="WOp-Sh-mQz"/>
-                            <constraint firstItem="MO5-df-87D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="389" id="b3x-bI-TMd"/>
+                            <constraint firstItem="9fd-pE-DiC" firstAttribute="top" secondItem="MO5-df-87D" secondAttribute="bottom" constant="20" id="14b-eT-a6c"/>
+                            <constraint firstItem="MO5-df-87D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="9mG-EQ-siL"/>
+                            <constraint firstItem="ahb-t0-wjD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="Acq-Nl-e98"/>
+                            <constraint firstItem="yZB-OH-i5j" firstAttribute="leading" secondItem="ahb-t0-wjD" secondAttribute="trailing" constant="11.5" id="Bbt-xc-wuy"/>
+                            <constraint firstItem="S8K-D3-sSo" firstAttribute="top" secondItem="9fd-pE-DiC" secondAttribute="bottom" constant="21" id="Gij-iw-dOc"/>
+                            <constraint firstItem="oT8-5B-eFQ" firstAttribute="top" secondItem="6CU-d2-FcY" secondAttribute="bottom" constant="8" symbolic="YES" id="Pzl-XY-6kF"/>
+                            <constraint firstItem="S8K-D3-sSo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="WQB-C3-eZK"/>
+                            <constraint firstItem="6CU-d2-FcY" firstAttribute="top" secondItem="S8K-D3-sSo" secondAttribute="bottom" constant="8" symbolic="YES" id="XyI-dU-lge"/>
+                            <constraint firstItem="yZB-OH-i5j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Y8z-ep-0ri"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9fd-pE-DiC" secondAttribute="trailing" constant="20" id="dwl-Bz-QYb"/>
+                            <constraint firstItem="Bn4-uf-m49" firstAttribute="top" secondItem="oT8-5B-eFQ" secondAttribute="bottom" constant="3" id="euk-af-l8z"/>
+                            <constraint firstItem="MO5-df-87D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fTG-Fe-B4g"/>
+                            <constraint firstItem="ahb-t0-wjD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="hea-x6-80W"/>
+                            <constraint firstItem="6CU-d2-FcY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ice-QL-9jp"/>
+                            <constraint firstItem="oT8-5B-eFQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oVS-5F-fqD"/>
+                            <constraint firstItem="Bn4-uf-m49" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="u0a-dO-zt0"/>
+                            <constraint firstItem="ahb-t0-wjD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="v6H-MS-0T3"/>
+                            <constraint firstItem="9fd-pE-DiC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zxv-lA-gh1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2LF-uK-tHG"/>
+                    <connections>
+                        <outlet property="chartView" destination="9fd-pE-DiC" id="QOO-Dc-Nc5"/>
+                        <outlet property="exerciseLabel" destination="S8K-D3-sSo" id="rmb-S5-yyt"/>
+                        <outlet property="startButtonOutlet" destination="MO5-df-87D" id="xmz-ER-1wy"/>
+                        <outlet property="statusLabel" destination="yZB-OH-i5j" id="afC-CF-2Ga"/>
+                        <outlet property="stopButtonOutlet" destination="ahb-t0-wjD" id="omk-dM-6Nh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46" y="104"/>
+            <point key="canvasLocation" x="-2150.7246376811595" y="864.50892857142856"/>
         </scene>
         <!--Graphs View Controller-->
         <scene sceneID="BZB-Gh-EXL">
@@ -162,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxK-jR-Fd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-804" y="86"/>
+            <point key="canvasLocation" x="-758" y="86"/>
         </scene>
     </scenes>
     <resources>

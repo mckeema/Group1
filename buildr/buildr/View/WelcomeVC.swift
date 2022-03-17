@@ -12,14 +12,14 @@ class WelcomeVC : UIViewController{
     
     @IBAction func continueBttn(_ sender: Any) {
         let selectionVC = SelectionVC()
-        self.navigationController?.present(selectionVC, animated: true)
+        self.navigationController?.pushViewController(selectionVC, animated: true)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        PlateInterface.shared.start()
+    
         
     }
     
