@@ -10,11 +10,12 @@ import UIKit
 import Charts
 
 class GraphsViewController : UIViewController{
-    @IBOutlet weak var AccelChart: LineChartView! = LineChartView()
+//    @IBOutlet var accelChart: LineChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateGraph()
+//        AccelChart.delegate = self
+//        updateGraph()
     }
     
     func updateGraph(){
@@ -30,7 +31,7 @@ class GraphsViewController : UIViewController{
             lineChartEntry.append(value) // here we add it to the data set
         }
 
-        let line1 = LineChartDataSet(entries: lineChartEntry, label: "Number") //Here we convert lineChartEntry to a LineChartDataSet
+        let line1 = LineChartDataSet(entries: lineChartEntry, label: "Accel X") //Here we convert lineChartEntry to a LineChartDataSet
         line1.colors = [NSUIColor.blue] //Sets the colour to blue
 
         let data = LineChartData() //This is the object that will be added to the chart
@@ -38,8 +39,8 @@ class GraphsViewController : UIViewController{
         print(data)
         
 
-        AccelChart.data = data //finally - it adds the chart data to the chart and causes an update
-        AccelChart.chartDescription?.text = "My awesome chart" // Here we set the description for the graph
+//        accelChart.data = data //finally - it adds the chart data to the chart and causes an update
+//        accelChart.chartDescription?.text = "My awesome chart" // Here we set the description for the graph
     }
     
 }
