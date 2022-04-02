@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0CBF0E27F8A39B00977114 /* PairingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CBF0D27F8A39B00977114 /* PairingVC.swift */; };
 		FB0D5ED427E1342300E54216 /* CBUUIDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0D5ED327E1342300E54216 /* CBUUIDS.swift */; };
 		FB99F3F027E2293C00A2E7A5 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F3EF27E2293C00A2E7A5 /* SensorData.swift */; };
 		FB99F3F327E27B6900A2E7A5 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = FB99F3F227E27B6900A2E7A5 /* Charts */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB0CBF0D27F8A39B00977114 /* PairingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingVC.swift; sourceTree = "<group>"; };
 		FB0D5ED327E1342300E54216 /* CBUUIDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUIDS.swift; sourceTree = "<group>"; };
 		FB99F3EF27E2293C00A2E7A5 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
 		FB99F3F727E2802E00A2E7A5 /* PlateInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateInterface.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				FB99F3F927E285C200A2E7A5 /* GraphsViewController.swift */,
 				FB99F3FB27E382D900A2E7A5 /* WelcomeVC.swift */,
 				FB99F3FD27E3843800A2E7A5 /* SelectionVC.swift */,
+				FB0CBF0D27F8A39B00977114 /* PairingVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				FB99F3F027E2293C00A2E7A5 /* SensorData.swift in Sources */,
 				FB0D5ED427E1342300E54216 /* CBUUIDS.swift in Sources */,
 				FB99F3FC27E382D900A2E7A5 /* WelcomeVC.swift in Sources */,
+				FB0CBF0E27F8A39B00977114 /* PairingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
