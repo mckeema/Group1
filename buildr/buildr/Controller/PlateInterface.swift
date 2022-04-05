@@ -8,19 +8,32 @@
 import UIKit
 import CoreBluetooth
 
+protocol PlateConnectionDelegate: AnyObject{
+    func plateDidConnnect()
+}
+
+protocol PlateInterfaceDelegate: AnyObject{
+    func didFinishRecording(displacements: [Float], rawData: [SensorData])
+    
+}
+
 final class PlateInterface: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate {
-    static let shared = PlateInterface()
+//    static let shared = PlateInterface()
 
     private var centralManager: CBCentralManager!
     private var peripheral: CBPeripheral!
     private var rxCharacteristic: CBCharacteristic!
-    private var recording : Bool = false
-    var data : [SensorData] = []
     
+    var recording : Bool = false
     private var PIN : String?
+    
+    var data : [SensorData] = []
     var connected : Bool = false
     
-    private override init(){}
+    weak var connectionDelegate: PlateConnectionDelegate?
+    weak var interfaceDelegate: PlateInterfaceDelegate?
+    
+//    private override init(){}
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         print("Central state update")
@@ -53,6 +66,7 @@ final class PlateInterface: NSObject, CBPeripheralDelegate, CBCentralManagerDele
         if peripheral == self.peripheral {
             print("Connected to your Plate")
             connected = true
+            connectionDelegate?.plateDidConnnect()
             peripheral.discoverServices([CBUUIDs.PlateServiceUUID])
         }
     }
@@ -96,8 +110,8 @@ final class PlateInterface: NSObject, CBPeripheralDelegate, CBCentralManagerDele
             if let json = try JSONSerialization.jsonObject(with: characteristicValue, options: []) as? [String: Any] {
                 // try to read out a string array
                 var plateData : SensorData
-                plateData = SensorData(accelX: Float(((json["accel"] as? [String: NSNumber])!)["y"]!),
-                                       accelY: Float(((json["accel"] as? [String: NSNumber])!)["x"]!),
+                plateData = SensorData(accelX: Float(((json["accel"] as? [String: NSNumber])!)["x"]!),
+                                       accelY: Float(((json["accel"] as? [String: NSNumber])!)["y"]!),
                                        accelZ: Float(((json["accel"] as? [String: NSNumber])!)["z"]!),
                                        gyroX: Float(((json["gyro"] as? [String: NSNumber])!)["x"]!),
                                        gyroY: Float(((json["gyro"] as? [String: NSNumber])!)["y"]!),
@@ -130,12 +144,31 @@ final class PlateInterface: NSObject, CBPeripheralDelegate, CBCentralManagerDele
     
     func stopRecording(){
         recording = false
+        let d = displacements()
+        interfaceDelegate?.didFinishRecording(displacements: d, rawData: data)
     }
 
 
     func connectWithPin(_ pin : String){
         self.PIN = pin
         centralManager = CBCentralManager(delegate: self, queue: nil)
+    }
+    
+    func displacements() -> [Float]{
+        var d : [Float] = []
+//        print(data.count)
+        let incr = 3
+        for i in stride(from: incr, to: data.count - 1, by: incr){
+            print(i)
+            let data1 = abs(data[i].accelY!) - 9.8
+            let data2 = abs(data[i - incr].accelY!) - 9.8
+            d.append((0.5)*(data1 - data2) * (0.1*incr*0.1*incr))
+            if d.count >= 2{
+                d[d.count - 1] += d[d.count - 2]
+            }
+        }
+        
+        return d
     }
 
 }
