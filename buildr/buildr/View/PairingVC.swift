@@ -16,9 +16,9 @@ class PairingVC: UIViewController, PlateConnectionDelegate{
     @IBOutlet weak var connectingLabel: UILabel!
     @IBOutlet weak var inputField: UITextField!
     @IBAction func inputChanged(_ sender: Any) {
-        if(inputField.text?.count == 4 && inputField.text! == "1234"){
+        if(inputField.text?.count == 4){
             connectingLabel.isHidden = false
-            plate.connectWithPin("Sensor Plate")
+            plate.connectWithPin(inputField.text!)
         }
     }
     

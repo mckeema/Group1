@@ -50,7 +50,7 @@ final class PlateInterface: NSObject, CBPeripheralDelegate, CBCentralManagerDele
 
 
         // Connect!
-        if(peripheral.name == PIN){
+        if(peripheral.name == "SensorPlate"+PIN!){
             self.centralManager.stopScan()
 
             // Copy the peripheral instance
@@ -157,12 +157,12 @@ final class PlateInterface: NSObject, CBPeripheralDelegate, CBCentralManagerDele
     func displacements() -> [Float]{
         var d : [Float] = []
 //        print(data.count)
-        let incr = 3
-        for i in stride(from: incr, to: data.count - 1, by: incr){
-            print(i)
+//        let incr = 3
+        for i in stride(from: 3, to: data.count - 1, by: 3){
+//            print(i)
             let data1 = abs(data[i].accelY!) - 9.8
-            let data2 = abs(data[i - incr].accelY!) - 9.8
-            d.append((0.5)*(data1 - data2) * (0.1*incr*0.1*incr))
+            let data2 = abs(data[i - 3].accelY!) - 9.8
+            d.append((0.5)*(data1 - data2) * (0.1*3*0.1*3))
             if d.count >= 2{
                 d[d.count - 1] += d[d.count - 2]
             }

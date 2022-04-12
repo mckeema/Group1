@@ -10,6 +10,8 @@
 		FB0CBF0E27F8A39B00977114 /* PairingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CBF0D27F8A39B00977114 /* PairingVC.swift */; };
 		FB0CBF1027FC8C5000977114 /* ModelRepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CBF0F27FC8C5000977114 /* ModelRepVC.swift */; };
 		FB0D5ED427E1342300E54216 /* CBUUIDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0D5ED327E1342300E54216 /* CBUUIDS.swift */; };
+		FB25F0E527FF31200079A73F /* RecordingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25F0E427FF31200079A73F /* RecordingVC.swift */; };
+		FB25F0E727FF31B80079A73F /* AnalysisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB25F0E627FF31B80079A73F /* AnalysisVC.swift */; };
 		FB99F3F027E2293C00A2E7A5 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F3EF27E2293C00A2E7A5 /* SensorData.swift */; };
 		FB99F3F327E27B6900A2E7A5 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = FB99F3F227E27B6900A2E7A5 /* Charts */; };
 		FB99F3F827E2802E00A2E7A5 /* PlateInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB99F3F727E2802E00A2E7A5 /* PlateInterface.swift */; };
@@ -28,6 +30,8 @@
 		FB0CBF0D27F8A39B00977114 /* PairingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingVC.swift; sourceTree = "<group>"; };
 		FB0CBF0F27FC8C5000977114 /* ModelRepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRepVC.swift; sourceTree = "<group>"; };
 		FB0D5ED327E1342300E54216 /* CBUUIDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBUUIDS.swift; sourceTree = "<group>"; };
+		FB25F0E427FF31200079A73F /* RecordingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingVC.swift; sourceTree = "<group>"; };
+		FB25F0E627FF31B80079A73F /* AnalysisVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisVC.swift; sourceTree = "<group>"; };
 		FB99F3EF27E2293C00A2E7A5 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
 		FB99F3F727E2802E00A2E7A5 /* PlateInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateInterface.swift; sourceTree = "<group>"; };
 		FB99F3F927E285C200A2E7A5 /* GraphsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				FB99F3FD27E3843800A2E7A5 /* SelectionVC.swift */,
 				FB0CBF0D27F8A39B00977114 /* PairingVC.swift */,
 				FB0CBF0F27FC8C5000977114 /* ModelRepVC.swift */,
+				FB25F0E427FF31200079A73F /* RecordingVC.swift */,
+				FB25F0E627FF31B80079A73F /* AnalysisVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,11 +206,13 @@
 				FBE9412A27E12F6100165E7F /* AppDelegate.swift in Sources */,
 				FB99F3FE27E3843800A2E7A5 /* SelectionVC.swift in Sources */,
 				FBE9412C27E12F6100165E7F /* SceneDelegate.swift in Sources */,
+				FB25F0E527FF31200079A73F /* RecordingVC.swift in Sources */,
 				FB99F3F027E2293C00A2E7A5 /* SensorData.swift in Sources */,
 				FB0D5ED427E1342300E54216 /* CBUUIDS.swift in Sources */,
 				FB99F3FC27E382D900A2E7A5 /* WelcomeVC.swift in Sources */,
 				FB0CBF0E27F8A39B00977114 /* PairingVC.swift in Sources */,
 				FB0CBF1027FC8C5000977114 /* ModelRepVC.swift in Sources */,
+				FB25F0E727FF31B80079A73F /* AnalysisVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
